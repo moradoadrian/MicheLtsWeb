@@ -1,0 +1,102 @@
+[
+    { "title": "Cerveza (500ml)", "price": 85, "image": "/images/cerveza.jpg" },
+    { "title": "Michelada (1L)", "price": 95, "image": "/images/michelada.jpg" },
+    { "title": "Boost (500ml)", "price": 85, "image": "/images/boost.jpg" },
+
+    {
+        "mixes": [
+          { "name": "Alternativo", "500": 90, "1000": 120 },
+          { "name": "Calimocho", "500": 90, "1000": 120 },
+          { "name": "Agua de la Llave", "500": 90, "1000": 120 },
+          { "name": "Sangría", "500": 90, "1000": 120 },
+          { "name": "Sky Blue", "500": 90, "1000": 120 },
+          { "name": "Azulito", "500": 90, "1000": 120 },
+          { "name": "Sky Pink", "500": 90, "1000": 120 },
+          { "name": "Ultraviolet", "500": 90, "1000": 120 },
+          { "name": "Skyy",  "500": 70, "1000": "N/A"},
+          { "name": "Vino Tinto (Copa)", "500": 90, "1000": "N/A" }
+        ],
+      
+        "cider": [
+          { "name": "Strongbow", "price": 50 }
+        ],
+      
+        "bebidasSinAlcohol": [
+          { "name": "Limonada Eléctrica", "500": 70, "1000": 90 },
+          { "name": "Azulito sin Alcohol", "500": 70, "1000": 90 },
+          { "name": "Boost", "price": 60, "1000": "N/A" },
+          { "name": "Arizona", "price": 45, "1000": "N/A" },
+          { "name": "Refresco", "price": 40, "1000": "N/A" },
+          { "name": "Limonada", "price": 40, "1000": "N/A" },
+          { "name": "Naranjada", "price": 40, "1000": "N/A" }
+        ],
+      
+        "cervezas": [
+          { "name": "Heineken", "pz": 60, "cubeta": 320 },
+          { "name": "Heineken 0.0", "pz": 55, "cubeta": 280 },
+          { "name": "Amstel Ultra", "pz": 55, "cubeta": 280 },
+          { "name": "Bohemia Vienna", "pz": 45, "cubeta": 250 },
+          { "name": "XX Lager", "pz": 45, "cubeta": 250 },
+          { "name": "XX Ambar", "pz": 45, "cubeta": 250 },
+          { "name": "Indio", "pz": 40, "cubeta": 220 },
+          { "name": "Tecate Light", "pz": 40, "cubeta": 220 },
+          { "name": "Carta Blanca", "pz": 40, "cubeta": 220 }
+        ],
+      
+        "micheladas": [
+          { "name": "Michelada Clamato", "500": 80, "1000": 100 },
+          { "name": "Michelada Mango", "500": 75, "1000": 95 },
+          { "name": "Michelada Piña", "500": 75, "1000": 95 },
+          { "name": "Michelada Tamarindo", "500": 75, "1000": 95 },
+          { "name": "Michelada Uva", "500": 75, "1000": 95 },
+          { "name": "Michelada Fresa", "500": 75, "1000": 95 },
+          { "name": "Michelada Chamoy", "500": 75, "1000": 95 },
+          { "name": "Michelada V8", "500": 75, "1000": 95 },
+          { "name": "Michelada Helada", "500": 75, "1000": 95 },
+          { "name": "Michelada Tradicional", "500": 75, "1000": 95 },
+          { "name": "Michelada S/Alcohol", "500": 75, "1000": 95 }
+        ],
+      
+        "especiales": [
+          { "name": "Michel Camarón", "500": 105, "1000": 130 },
+          { "name": "Gomichel", "500": 90, "1000": 120 },
+          { "name": "Tintolada", "500": 85, "1000": 105 },
+          { "name": "Boost", "500": 85, "1000": 105 },
+          { "name": "Red Miche", "500": 85, "1000": 105 },
+          { "name": "Clamato Especial", "500": 85, "1000": 105 },
+          { "name": "Miche Cooler", "500": 85, "1000": 105 },
+          { "name": "Miche Sangrita", "500": 85, "1000": 105 },
+          { "name": "Miche Cielo Rojo", "500": 85, "1000": 105 }
+        ],
+      
+        "caguamas": [
+          { "name": "Venenosa", "price": 150 },
+          { "name": "Heineken", "price": 120 },
+          { "name": "Miller High Life", "price": 120 },
+          { "name": "XX Lager", "price": 100 },
+          { "name": "XX Ambar", "price": 100 },
+          { "name": "Indio", "price": 95 },
+          { "name": "Tecate Light", "price": 95 },
+          { "name": "Carta Blanca", "price": 95 }
+        ],
+      
+        "preparados": [
+          { "name": "Clamato", "ch": 35, "g": 65 },
+          { "name": "De Sabor", "ch": 30, "g": 55 }
+        ],
+      
+        "promociones": {
+          "lunes": "Miche LTS $75 / Carta Blanca $75",
+          "martes": "Cubeta $140 / 2 Caguamas $140",
+          "miercoles": "2 Caguamas $140 / 4 Cervezas $140",
+          "jueves": "Miche LTS $70 / Cubeta $150",
+          "viernes": "Miche LTS 3x2"
+        },
+      
+        "nota": "El precio puede aumentar $10 dependiendo de la cerveza"
+      }
+      
+      
+    ]
+
+    

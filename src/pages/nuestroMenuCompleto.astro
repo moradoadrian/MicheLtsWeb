@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+import menu from "../content/menu.json";
+---
+
+<Layout title="Menú completo">
+  <section class="bg-neutral-950 text-white py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-16 md:mb-20">
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4"
+        >
+          Nuestro <span class="text-brand">Menú</span>
+        </h1>
+        <div class="w-24 h-0.5 bg-brand mx-auto mb-4"></div>
+        <p class="text-gray-400 text-sm md:text-base uppercase tracking-wider">
+          Delicias y bebidas premium
+        </p>
+      </div>
+
+      <!-- MICHELADAS -->
+      <div
+        class="mb-16 bg-white/5 rounded-2xl p-6 md:p-10 border border-white/10 shadow-2xl"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand">
+            Micheladas
+          </h2>
+          <div
+            class="flex-1 h-px bg-gradient-to-r from-brand/50 to-transparent"
+          >
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          {
+            Array.isArray(menu) &&
+              menu
+                .find((m) => Array.isArray(m.micheladas))
+                ?.micheladas?.map((item) => (
+                  <div class="flex items-center justify-between px-3 py-4 rounded-lg hover:bg-white/10 transition group">
+                    <span class="text-lg font-medium group-hover:text-brand transition">
+                      {item.name}
+                    </span>
+
+                    <div class="flex items-center gap-6">
+                      <div class="text-right">
+                        <span class="block text-xs text-gray-400 uppercase">
+                          500 ml
+                        </span>
+                        <span class="text-lg font-bold text-brand">
+                          ${item["500"]}
+                        </span>
+                      </div>
+
+                      <div class="w-px h-8 bg-white/20" />
+
+                      <div class="text-right">
+                        <span class="block text-xs text-gray-400 uppercase">
+                          1 L
+                        </span>
+                        <span class="text-lg font-bold text-brand">
+                          ${item["1000"]}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))
+          }
+        </div>
+      </div>
+
+      <!-- CERVEZA -->
+      <div
+        class="mb-16 bg-white/5 rounded-2xl p-6 md:p-10 border border-white/10 shadow-2xl"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand">
+            Cerveza
+          </h2>
+          <div
+            class="flex-1 h-px bg-gradient-to-r from-brand/50 to-transparent"
+          >
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          {
+            Array.isArray(menu) &&
+              menu
+                .find((m) => Array.isArray(m.cervezas))
+                ?.cervezas?.map((item) => (
+                  <div class="flex items-center justify-between px-3 py-4 rounded-lg hover:bg-white/10 transition group">
+                    <span class="text-lg font-medium group-hover:text-brand transition">
+                      {item.name}
+                    </span>
+
+                    <div class="flex items-center gap-6">
+                      <div class="text-right">
+                        <span class="block text-xs text-gray-400 uppercase">
+                          Pieza
+                        </span>
+                        <span class="text-lg font-bold text-brand">
+                          ${item.pz}
+                        </span>
+                      </div>
+
+                      <div class="w-px h-8 bg-white/20" />
+
+                      <div class="text-right">
+                        <span class="block text-xs text-gray-400 uppercase">
+                          Cubeta
+                        </span>
+                        <span class="text-lg font-bold text-brand">
+                          ${item.cubeta}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))
+          }
+        </div>
+      </div>
+
+      <!-- CAGUAMAS -->
+      <div
+        class="mb-12 bg-white/5 rounded-2xl p-6 md:p-10 border border-white/10 shadow-2xl"
+      >
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand">
+            Caguamas
+          </h2>
+          <div
+            class="flex-1 h-px bg-gradient-to-r from-brand/50 to-transparent"
+          >
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          {
+            Array.isArray(menu) &&
+              menu
+                .find((m) => Array.isArray(m.caguamas))
+                ?.caguamas?.map((item) => (
+                  <div class="flex items-center justify-between px-3 py-4 rounded-lg hover:bg-white/10 transition group">
+                    <span class="text-lg font-medium group-hover:text-brand transition">
+                      {item.name}
+                    </span>
+                    <span class="text-2xl font-extrabold text-brand">
+                      ${item.price}
+                    </span>
+                  </div>
+                ))
+          }
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="text-center mt-12 pt-8 border-t border-white/10">
+        <p class="text-sm text-gray-400 italic">
+          * Los precios pueden variar según disponibilidad
+        </p>
+        <p class="text-xs text-gray-500 mt-2">
+          Consulte con nuestro personal para información actualizada
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

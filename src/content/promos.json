@@ -1,0 +1,33 @@
+[
+    
+    {
+    "title": "Promo Lunes",
+    "subtitle": "Miche Lts. a $75",
+    "image": "/images/promoLunes.png"
+    },
+    {
+    "title": "Micheladas",
+    "subtitle": "3 x 2 Martes a Viernes",
+    "image": "/images/promoMiches.jpeg"
+    },
+    {
+    "title": "Martes de Caguamas",
+    "subtitle": "Promo 3x$200",
+    "image": "/images/promo-caguama.jpg"
+    },
+    {
+    "title": "Promo Miércoles",
+    "subtitle": "Cerveza a $25",
+    "image": "/images/promo-michelada.jpg"
+    },
+    {
+    "title": "Promo Jueves",
+    "subtitle": "Michelada a $125",
+    "image": "/images/michelada-hero.jpg"
+    },
+    {
+    "title": "Promo Viernes",
+    "subtitle": "Michelada a $150",
+    "image": "/images/michelada.jpg"
+    }
+    ]
