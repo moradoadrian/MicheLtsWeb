@@ -16,18 +16,13 @@
     "image": "/images/promo-caguama.jpg"
     },
     {
-    "title": "Promo Miércoles",
-    "subtitle": "Cerveza a $25",
-    "image": "/images/promo-michelada.jpg"
+    "title": "Promo Miercolitros",
+    "subtitle": "2 Caguamas a $140, (XX LAGER, XX AMBAR, INDIO, TECATE LIGHT, CARTA BLANCA)",
+    "image": "/images/miercolitros.png"
     },
     {
-    "title": "Promo Jueves",
-    "subtitle": "Michelada a $125",
-    "image": "/images/michelada-hero.jpg"
-    },
-    {
-    "title": "Promo Viernes",
-    "subtitle": "Michelada a $150",
-    "image": "/images/michelada.jpg"
+    "title": "SOLO PARA ELLAS",
+    "subtitle": "MICHE LTS. $70 (APLICA SOLO PARA TOMAR EN EL LOCAL)",
+    "image": "/images/mujer.jpg"
     }
     ]

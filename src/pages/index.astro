@@ -57,19 +57,27 @@ import menu from "../content/menu.json"; import events from
 
     <div class="container mx-auto px-4 relative z-10">
       <div
-        class="max-w-4xl mx-auto bg-black/40 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-sm"
+        class="max-w-5xl mx-auto bg-black/40 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-sm"
       >
-        <div class="text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Encuéntranos</h2>
-          <p class="text-gray-400">Ven a vivir la experiencia Miche Lts.</p>
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-3">Encuéntranos</h2>
+          <p class="text-gray-400">
+            Ven a vivir la experiencia <span class="text-brand font-semibold"
+              >Miche Lts</span
+            >.
+          </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <!-- Info -->
+          <div class="space-y-8">
+            <!-- Ubicación -->
+            <div class="flex gap-4">
               <div
-                class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0"
+                class="w-11 h-11 rounded-full bg-brand/15 flex items-center justify-center text-brand shrink-0"
               >
+                <!-- icon -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5"
@@ -91,21 +99,24 @@ import menu from "../content/menu.json"; import events from
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold text-white text-lg mb-1">Ubicación</h3>
-                <p class="text-gray-400">
-                  Av. 12 de Octubre No. 226, Col. Nuevo Celaya Celaya, Gto.
+                <h3 class="font-bold text-white text-lg">Ubicación</h3>
+                <p class="text-gray-400 text-sm">
+                  Av. 12 de Octubre No. 226, Col. Nuevo Celaya, Celaya, Gto.
                 </p>
                 <a
-                  href="#"
-                  class="text-brand text-sm mt-2 inline-block hover:underline"
-                  >Ver en mapa</a
+                  href="https://maps.app.goo.gl/6N4MQ9t6QSfWwBo49"
+                  target="_blank"
+                  class="inline-flex items-center gap-1 text-brand text-sm mt-2 hover:underline"
                 >
+                  Ver en Google Maps →
+                </a>
               </div>
             </div>
 
-            <div class="flex items-start gap-4">
+            <!-- Horario -->
+            <div class="flex gap-4">
               <div
-                class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0"
+                class="w-11 h-11 rounded-full bg-brand/15 flex items-center justify-center text-brand shrink-0"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,30 +133,47 @@ import menu from "../content/menu.json"; import events from
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold text-white text-lg mb-1">Horario</h3>
-                <p class="text-gray-400">Lunes a Domingo</p>
-                <p class="text-brand font-bold">5:00pm - 2:00am</p>
+                <h3 class="font-bold text-white text-lg">Horario</h3>
+                <p class="text-gray-400 text-sm">Lunes a sabado</p>
+                <p class="text-brand font-bold">10:00 hsrs – 23:00 hrs</p>
+                <p class="text-gray-400 text-sm">Domingo</p>
+                <p class="text-brand font-bold">10:00 hsrs – 17:00 hrs</p>
               </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="grid sm:grid-cols-2 gap-4 pt-4">
+              <a
+                href="tel:+521234567890"
+                class="py-3 bg-brand hover:bg-brand-dark text-black font-bold text-center rounded-xl transition"
+              >
+                Llamar
+              </a>
+              <a
+                href="https://wa.me/521234567890"
+                target="_blank"
+                class="py-3 border border-white/20 hover:bg-white/5 text-white font-semibold text-center rounded-xl transition"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
 
-          <div class="bg-white/5 rounded-xl p-6 border border-white/5">
-            <h3 class="font-bold text-white mb-4">Reservaciones</h3>
-            <p class="text-gray-400 text-sm mb-6">
-              Asegura tu lugar para los eventos especiales.
-            </p>
-            <a
-              href="tel:+521234567890"
-              class="block w-full py-3 bg-brand hover:bg-brand-dark text-black font-bold text-center rounded-lg transition-colors"
+          <!-- Mapa -->
+          <div
+            class="relative rounded-2xl overflow-hidden border border-white/10"
+          >
+            <iframe
+              src="https://www.google.com/maps?q=Av.%2012%20de%20Octubre%20226%20Celaya%20Gto&output=embed"
+              class="w-full h-[320px] md:h-full"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none"
             >
-              Llamar ahora
-            </a>
-            <a
-              href="#"
-              class="block w-full py-3 mt-3 border border-white/20 hover:bg-white/5 text-white font-semibold text-center rounded-lg transition-colors"
-            >
-              WhatsApp
-            </a>
+            </div>
           </div>
         </div>
       </div>

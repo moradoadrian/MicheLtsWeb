@@ -1,7 +1,6 @@
 <section
   class="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
 >
-  <!-- Background Image with Overlay -->
   <div class="absolute inset-0 z-0">
     <img
       src="/images/michelada-hero.jpg"
@@ -18,7 +17,6 @@
     </div>
   </div>
 
-  <!-- Content -->
   <div
     class="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center"
   >
@@ -51,9 +49,98 @@
       </div>
     </div>
 
-    <!-- Optional: Floating Element or just empty space for the background to shine -->
-    <div class="hidden md:block relative">
-      <!-- Decorational elements could go here -->
+    <div class="hidden md:block relative"></div>
+  </div>
+
+  <div
+    id="promo-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4"
+  >
+    <div
+      id="modal-backdrop"
+      class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+    >
+    </div>
+
+    <div
+      class="relative z-10 w-full max-w-2xl transform overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl border border-brand/30 animate-fade-in-up"
+    >
+      <button
+        id="close-modal-btn"
+        class="absolute right-3 top-3 z-20 rounded-full bg-black/50 p-2 text-white hover:bg-brand hover:text-black transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <img
+        src="/images/promo-banner.jpeg"
+        alt="Promoción Especial"
+        class="w-full h-auto object-cover"
+      />
     </div>
   </div>
 </section>
+
+<script>
+  // Ejecutar cuando el DOM esté listo
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("promo-modal");
+    const closeBtn = document.getElementById("close-modal-btn");
+    const backdrop = document.getElementById("modal-backdrop");
+
+    if (!modal || !closeBtn || !backdrop) return;
+
+    // Función para cerrar el modal
+    const closeModal = () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    };
+
+    // 1. Mostrar el modal después de un breve retraso (ej. 1 segundo) para que cargue el sitio primero
+    setTimeout(() => {
+      // Opcional: Verificar si ya se mostró antes (usando sessionStorage)
+      // Si quieres que salga SIEMPRE, borra el if de abajo.
+      if (!sessionStorage.getItem("modalShown")) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        // Marcar como visto para que no salga si recarga la página (opcional)
+        sessionStorage.setItem("modalShown", "true");
+      }
+    }, 1000);
+
+    // 2. Eventos para cerrar
+    closeBtn.addEventListener("click", closeModal);
+
+    // Cerrar si hace clic fuera de la imagen (en el fondo oscuro)
+    backdrop.addEventListener("click", closeModal);
+  });
+</script>
+
+<style>
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+</style>

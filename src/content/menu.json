@@ -1,7 +1,12 @@
 [
-    { "title": "Cerveza (500ml)", "price": 85, "image": "/images/cerveza.jpg" },
-    { "title": "Michelada (1L)", "price": 95, "image": "/images/michelada.jpg" },
-    { "title": "Boost (500ml)", "price": 85, "image": "/images/boost.jpg" },
+        { "title": "Cerveza (500ml)", "price": 85, "image": "/images/cheve.jpg" },
+        { "title": "Alitas (10 Pz)", "price": 160, "image": "/images/hotWings.jpg" },
+        { "title": "Michelada (1L)", "price": 95, "image": "/images/michelada.jpg" },
+        { "title": "Limonada Eléctrica (1L)", "price": 90, "image": "/images/limonade.jpg" },
+        { "title": "Vete a la Burguer", "price": 119, "image": "/images/vete_a_la_burguer.jpg" },
+        { "title": "Venenosa", "price": 150, "image": "/images/venenosa.png" },
+    
+    
 
     {
         "mixes": [
