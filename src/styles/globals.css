@@ -5,8 +5,8 @@
   --color-brand-dark: #00a455;
   --color-bg: #0b0b0b;
   
-  --font-sans: Outfit, sans-serif;
-  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Oswald", sans-serif;
 }
 
 @layer base {

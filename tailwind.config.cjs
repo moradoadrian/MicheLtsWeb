@@ -10,8 +10,8 @@ module.exports = {
 				bg: '#0b0b0b'
 			},
 			fontFamily: {
-				sans: ['Outfit', 'sans-serif'],
-				serif: ['"Playfair Display"', 'serif'],
+				sans: ['"Montserrat"', 'sans-serif'],
+				serif: ['"Oswald"', 'sans-serif'],
 			}
 		}
 	},
