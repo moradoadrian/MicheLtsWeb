@@ -36,3 +36,19 @@
   @apply bg-brand;
 }
 
+.nav-link {
+  @apply hover:text-brand transition-all duration-300 relative;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-link {
+  @apply text-white hover:text-brand transition-colors;
+}

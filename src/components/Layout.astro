@@ -23,6 +23,7 @@ import "../styles/globals.css";
       <div
         class="container mx-auto px-6 lg:px-8 h-28 flex items-center justify-between"
       >
+        <!-- LOGO -->
         <div class="flex items-center gap-4">
           <div
             class="w-20 h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center bg-white/5 p-2 shadow-inner"
@@ -40,45 +41,51 @@ import "../styles/globals.css";
             <p class="text-xs text-gray-400 uppercase tracking-wider">Bar</p>
           </div>
         </div>
+
+        <!-- NAV DESKTOP -->
         <nav
           class="hidden md:flex space-x-10 lg:space-x-12 text-base lg:text-lg font-medium uppercase tracking-wider"
         >
-          <a
-            href="/"
-            class="hover:text-brand transition-all duration-300 relative group"
+          <a href="/" class="nav-link">Inicio</a>
+          <a href="#menu" class="nav-link">Carta</a>
+          <a href="#eventos" class="nav-link">Eventos</a>
+          <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-white focus:outline-none"
+          aria-label="Abrir menú"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            Inicio
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full"
-            ></span>
-          </a>
-          <a
-            href="#menu"
-            class="hover:text-brand transition-all duration-300 relative group"
-          >
-            Carta
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full"
-            ></span>
-          </a>
-          <a
-            href="#eventos"
-            class="hover:text-brand transition-all duration-300 relative group"
-          >
-            Eventos
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full"
-            ></span>
-          </a>
-          <a
-            href="#contacto"
-            class="hover:text-brand transition-all duration-300 relative group"
-          >
-            Contacto
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full"
-            ></span>
-          </a>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- MENÚ MÓVIL -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden bg-bg/95 backdrop-blur-lg border-t border-white/10"
+      >
+        <nav
+          class="flex flex-col text-center py-6 space-y-6 text-lg font-medium uppercase tracking-wider"
+        >
+          <a href="/" class="mobile-link">Inicio</a>
+          <a href="#menu" class="mobile-link">Carta</a>
+          <a href="#eventos" class="mobile-link">Eventos</a>
+          <a href="#contacto" class="mobile-link">Contacto</a>
         </nav>
       </div>
     </header>
@@ -96,5 +103,13 @@ import "../styles/globals.css";
         </div>
       </div>
     </footer>
+    <script>
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn?.addEventListener("click", () => {
+        menu?.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
