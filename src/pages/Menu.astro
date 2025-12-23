@@ -225,6 +225,48 @@ const promoHoy = promos[hoy];
   </div>
 </Layout>
 
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("astro:page-load", () => {
+    initMenuAnimations();
+  });
+
+  // Fallback for initial load
+  initMenuAnimations();
+
+  function initMenuAnimations() {
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach((section) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+    
+    // Animate hero elements if present on this page (reusing logic or specific for menu hero)
+    const heroTitle = document.querySelector("h1");
+    if(heroTitle) {
+        gsap.from(heroTitle, { opacity: 0, y: -30, duration: 1, ease: "power4.out" });
+    }
+  }
+</script>
+
 <style>
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -240,4 +282,4 @@ const promoHoy = promos[hoy];
       rgba(11, 11, 11, 0) 70%
     );
   }
-</style>
+</script>
