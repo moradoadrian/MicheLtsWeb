@@ -54,21 +54,37 @@ Sigue estos pasos para ejecutar el proyecto localmente:
     pnpm build
     ```
 
-## 📂 Estructura del Proyecto
+## 📂 Estructura Detallada del Proyecto
 
-```text
-/
-├── public/             # Archivos estáticos (imágenes, favicon)
-├── src/
-│   ├── components/     # Componentes reutilizables (Hero, Carousel, MenuGrid, etc.)
-│   ├── content/        # Datos del sitio (JSONs para menú, eventos, promos)
-│   ├── layouts/        # Plantillas de diseño base
-│   ├── pages/          # Rutas y páginas del sitio
-│   └── styles/         # Estilos globales CSS
-├── astro.config.mjs    # Configuración de Astro
-├── package.json        # Dependencias y scripts
-└── tailwind.config.cjs # Configuración de Tailwind
-```
+A continuación se describe el propósito de los archivos y carpetas principales dentro de `src/`:
+
+### `/src/components/`
+Componentes de interfaz reutilizables (UI) que construyen las páginas.
+-   **`Layout.astro`**: **Componente Maestro**. Define la estructura base HTML (head, body), carga las fuentes (Oswald/Montserrat), e incluye la barra de navegación (Header) y el pie de página (Footer). Todas las páginas deben usar este componente.
+-   **`Hero.astro`**: Sección de bienvenida en la página de inicio. Contiene el título principal animado, imagen de fondo y botones de llamada a la acción (CTA).
+-   **`Carousel.astro`**: Componente de carrusel interactivo para mostrar las promociones destacadas obtenidas de `promos.json`.
+-   **`MenuGrid.astro`**: Componente que muestra una vista previa o selección destacada del menú en la página de inicio.
+-   **`EventCard.astro`**: Tarjeta visual para mostrar la información de un evento individual (fecha, título, botón de reserva).
+-   **`Footer.astro`**: (Si aplica) Componente modular para el pie de página.
+
+### `/src/pages/`
+Rutas del sitio web. Astro genera una URL por cada archivo `.astro` en esta carpeta.
+-   **`index.astro`**: **Página de Inicio (Home)**. Orquesta los componentes principales: Hero, Carrusel, Eventos y la sección de Contacto/Mapa.
+-   **`Menu.astro`**: **Página de Carta Digital**. Renderiza dinámicamente todo el menú desde `menu.json`. Incluye navegación "sticky" por categorías y animaciones con GSAP.
+
+### `/src/content/`
+Fuente de la verdad para los datos del sitio (JSON).
+-   **`menu.json`**: Base de datos de productos. Define categorías (micheladas, cervezas, snacks), precios, variantes (500ml, 1L, Cubeta) y descripciones.
+-   **`events.json`**: Lista de eventos próximos. Alimenta la sección de eventos en el Home.
+-   **`promos.json`**: Datos para los banners promocionales del carrusel.
+
+### `/src/styles/`
+-   **`globals.css`**: Hoja de estilos global. Importa Tailwind, define variables CSS personalizadas (colores de marca, fuentes) y estilos base.
+
+### Archivos de Configuración
+-   **`tailwind.config.cjs`**: Personalización de Tailwind. Aquí se definen los colores corporativos (`brand`, `bg`) y la tipografía.
+-   **`astro.config.mjs`**: Configuración del framework Astro.
+-   **`package.json`**: Gestión de dependencias (incluyendo `gsap`, `astro`, `tailwindcss`) y scripts del proyecto.
 
 ## 📝 Personalización del Contenido
 
